@@ -1,7 +1,7 @@
-const generateTestCasesCharNoDuplicate = require('../premitive/generate-test-cases-char-no-duplicate');
+const generateTestCasesCharNoDuplicate = require('../primitive/generate-test-cases-char-no-duplicate');
 
 /* Everything coming in via Route Paramter is of String type */
-//let listDataStr = ["PREMITIVE", "ARRAY", "TREE", "GRAPH"];
+//let listDataStr = ["PRIMITIVE", "ARRAY", "TREE", "GRAPH"];
 //let dataType = ["int", "float", "double", "char"];
 
 // safe charSet abcdABCD@&!^&*()_-+='":;,.>$|{}[]`~
@@ -16,7 +16,7 @@ function generateNCasesOfArrayCharNoRepetition(size,number,charSet){
 	let res = "";
 
 	for(let i=0;i<number;++i){
-		res = generateTestCasesCharNoDuplicate(size,charSet).replace(/\n/g,"");
+		res = generateTestCasesCharNoDuplicate(size,charSet).replace(/\n/g," ");
 		tests = tests.concat(res,"\n");
 	}
 

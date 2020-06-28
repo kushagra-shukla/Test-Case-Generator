@@ -1,5 +1,5 @@
-const generateTestCasesChar = require('../../src/premitive/generate-test-cases-char');
-const generateTestCasesCharNoDuplicate = require('../../src/premitive/generate-test-cases-char-no-duplicate')
+const generateTestCasesChar = require('../../src/primitive/generate-test-cases-char');
+const generateTestCasesCharNoDuplicate = require('../../src/primitive/generate-test-cases-char-no-duplicate')
 // safe charSet = abcdABCD@&!^&*()_-+='":;,.>$|{}[]`~
 // unsafe charSet = %&/\? solution ? use urlencoding values
 
@@ -7,11 +7,11 @@ module.exports = function(req){
 
 	let out;
 
-	// suitable for Premitive char
+	// suitable for Primitive char
 	if(!(req.query.hasOwnProperty('duplicate_flag'))){
 		const number = parseInt(req.query.number);
 		const charSet = req.query.charSet;
-		console.log(`Data Structure: PREMITIVE, Data Type: char, Number of Cases: ${number}, charSet: ${charSet}`);
+		console.log(`Data Structure: PRIMITIVE, Data Type: char, Number of Cases: ${number}, charSet: ${charSet}`);
 		out = generateTestCasesChar(number,charSet);		
 		console.log(out);
 		
@@ -21,7 +21,7 @@ module.exports = function(req){
 		const number = parseInt(req.query.number);
 		const charSet = req.query.charSet;
 		const duplicate_flag = req.query.duplicate_flag.toLowerCase() == 'true'? true : false;
-		console.log(`Data Structure: PREMITIVE, Data Type: char, Number of Cases: ${number}, charSet: ${charSet}, Duplicate: ${duplicate_flag}`);
+		console.log(`Data Structure: PRIMITIVE, Data Type: char, Number of Cases: ${number}, charSet: ${charSet}, Duplicate: ${duplicate_flag}`);
 
 		let result = null;
 		if(duplicate_flag == true){

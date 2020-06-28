@@ -18,7 +18,7 @@ module.exports = function(req){
 
 	let out;
 
-	// suitable for Premitive char
+	// suitable for Primitive char
 	if(req.query.dataType.toLowerCase() === 'char'){
 		if(!(req.query.hasOwnProperty('duplicate_flag'))){
 			const size = parseInt(req.query.size);
@@ -78,7 +78,7 @@ module.exports = function(req){
 
 	// if invalid dataType is given then it will be handled by function in src files
 	else{
-	// suitable for Premitives like int, float, double
+	// suitable for Primitives like int, float, double
 		if(!(req.query.hasOwnProperty('duplicate_flag'))){
 			const size = parseInt(req.query.size);
 			const dataType = req.query.dataType;

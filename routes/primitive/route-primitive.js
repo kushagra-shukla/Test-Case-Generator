@@ -2,7 +2,7 @@ const generateTestCasesNumber = require('./route-number');
 const generateTestCasesChar = require('./route-char');
 
 
-function generateTestCasesPremitive(req){
+function generateTestCasesPrimitive(req){
 
 	const dataType = req.query.dataType.toLowerCase();
 
@@ -15,6 +15,6 @@ function generateTestCasesPremitive(req){
 
 module.exports = function(req){
 
-	return generateTestCasesPremitive(req);
+	return generateTestCasesPrimitive(req);
 
 };

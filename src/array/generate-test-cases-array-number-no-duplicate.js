@@ -1,6 +1,6 @@
-const generateTestCasesNumber = require('../premitive/generate-test-cases-number');
+const generateTestCasesNumber = require('../primitive/generate-test-cases-number');
 /* Everything coming in via Route Paramter is of String type */
-//let listDataStr = ["PREMITIVE", "ARRAY", "TREE", "GRAPH"];
+//let listDataStr = ["PRIMITIVE", "ARRAY", "TREE", "GRAPH"];
 //let dataType = ["int", "float", "double", "char"];
 
 // Range: [min, max)

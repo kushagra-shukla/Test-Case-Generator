@@ -1,7 +1,7 @@
-const generateTestCasesChar = require('../premitive/generate-test-cases-char');
+const generateTestCasesChar = require('../primitive/generate-test-cases-char');
 
 /* Everything coming in via Route Paramter is of String type */
-//let listDataStr = ["PREMITIVE", "ARRAY", "TREE", "GRAPH"];
+//let listDataStr = ["PRIMITIVE", "ARRAY", "TREE", "GRAPH"];
 //let dataType = ["int", "float", "double", "char"];
 
 // safe charSet abcdABCD@&!^&*()_-+='":;,.>$|{}[]`~
@@ -11,7 +11,7 @@ function generateNCasesOfArrayChar(size,number,charSet){
 	let tests = "";
 	let res = "";
 	for(let i=0;i<number;++i){
-		res = generateTestCasesChar(size,charSet).replace(/\n/g,"");
+		res = generateTestCasesChar(size,charSet).replace(/\n/g," ");
 		tests = tests.concat(res,"\n");
 	}
 

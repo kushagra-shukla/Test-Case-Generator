@@ -8,7 +8,7 @@ module.exports = function(req){
 
 	let out;
 	
-	// suitable for Premitive char
+	// suitable for Primitive char
 	if(req.query.dataType.toLowerCase() === 'char'){
 		const size = parseInt(req.params.size);
 		const number = parseInt(req.params.number);
@@ -18,7 +18,7 @@ module.exports = function(req){
 		console.log(out);		
 	}
 
-	// suitable for Premitives like int, float, double
+	// suitable for Primitives like int, float, double
 	else{
 		const size = parseInt(req.params.size);
 		const dataType = req.params.dataType;

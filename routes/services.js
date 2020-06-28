@@ -1,7 +1,7 @@
 
-//const generateTestCasesNumber = require('./premitive/route-number');
-//const generateTestCasesChar = require('./premitive/route-char');
-const generateTestCasesPremitive = require('./premitive/route-premitive');
+//const generateTestCasesNumber = require('./primitive/route-number');
+//const generateTestCasesChar = require('./primitive/route-char');
+const generateTestCasesPrimitive = require('./primitive/route-primitive');
 const generateTestCasesArray = require('./array/route-array');
 const generateTestCasesTree = require('./tree/route-tree');
 
@@ -19,8 +19,8 @@ module.exports = function(app){
 		let out;
 		
 		switch(dataStr){
-			case 'PREMITIVE':
-				out = generateTestCasesPremitive(req);
+			case 'PRIMITIVE':
+				out = generateTestCasesPrimitive(req);
 				res.status(200);
 				break;
 			case 'ARRAY':
@@ -72,7 +72,7 @@ module.exports = function(app){
 		let dataStr = req.params[0].slice(0,req.params[0].indexOf('/'));
 		console.log(dataStr);
 		switch(dataStr){
-			case "PREMITIVE":
+			case "PRIMITIVE":
 				generateTestCasesNumber(app);
 				generateTestCasesChar(app);
 				break;

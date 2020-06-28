@@ -1,9 +1,9 @@
-const generateTestCasesNumber = require('../../src/premitive/generate-test-cases-number');
-const generateTestCasesNumberNoDuplicate = require('../../src/premitive/generate-test-cases-number-no-duplicate');
+const generateTestCasesNumber = require('../../src/primitive/generate-test-cases-number');
+const generateTestCasesNumberNoDuplicate = require('../../src/primitive/generate-test-cases-number-no-duplicate');
 
 module.exports = function(req){
 
-	// suitable for Premitives like int, float, double
+	// suitable for Primitives like int, float, double
 	// if duplicate flag is not provided in parameter then this will be eequivalent to duplicate_flag = true
 
 	/*
@@ -22,7 +22,7 @@ module.exports = function(req){
 		const number = parseInt(req.query.number);
 		const min = parseFloat(req.query.min);
 		const max = parseFloat(req.query.max);
-		console.log(`Data Structure: PREMITIVE, Data Type: ${dataType}, Number of Cases: ${number}, Min Value: ${min}, Max Value: ${max}`);
+		console.log(`Data Structure: PRIMITIVE, Data Type: ${dataType}, Number of Cases: ${number}, Min Value: ${min}, Max Value: ${max}`);
 		//res.send("Hello TestCaseGenerator");
 		out = generateTestCasesNumber(dataType,number,min,max);
 		console.log(out);
@@ -35,7 +35,7 @@ module.exports = function(req){
 		const max = parseFloat(req.query.max);
 		const duplicate_flag = req.query.duplicate_flag.toLowerCase() == 'true'? true : false;
 		
-		console.log(`Data Structure: PREMITIVE, Data Type: ${dataType}, Number of Cases: ${number}, Min Value: ${min}, Max Value: ${max}, Duplicate: ${duplicate_flag}`);
+		console.log(`Data Structure: PRIMITIVE, Data Type: ${dataType}, Number of Cases: ${number}, Min Value: ${min}, Max Value: ${max}, Duplicate: ${duplicate_flag}`);
 		//res.send("Hello TestCaseGenerator");
 		let result = null;
 		// one line scope of if without quotes seems to be not the case in javascript
