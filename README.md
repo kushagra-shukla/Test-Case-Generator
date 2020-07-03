@@ -20,21 +20,21 @@ Most queries are simple and self-explanatory. Although something which requires 
 These are the only optional query parameters rest all are required for some combination of the data structure and data type.
 
 # Required Query Parameters
-* dataStr : Stores the data structure. Supported options are `PRIMITIVE` and `ARRAY`.
-* dataType : Stores the data type within the data structure. Supported options are `char`, `int`, `float` and `double`.
-* size : Stores the size of `ARRAY`. Required only if the data structure used is `ARRAY`.
-* number : Stores the number of test cases required. 
-* min : Stores the lower limit (including itself) of the range of values that need to be covered in test cases.
-* max : Stores the upper limit (not including itself) of the range of values that need to be covered in test cases. 
+* __dataStr__ : Stores the data structure. Supported options are `PRIMITIVE` and `ARRAY`.
+* __dataType__ : Stores the data type within the data structure. Supported options are `char`, `int`, `float` and `double`.
+* __size__ : Stores the size of `ARRAY`. Required only if the data structure used is `ARRAY`.
+* __number__ : Stores the number of test cases required. 
+* __min__ : Stores the lower limit (including itself) of the range of values that need to be covered in test cases.
+* __max__ : Stores the upper limit (not including itself) of the range of values that need to be covered in test cases. 
   > Mathematically, Range = [min,max) : min,max ∈ **I** :yum:
-* charSet : Stores the character set out of which the test cases of `char` data type will be generated.
+* __charSet__ : Stores the character set out of which the test cases of `char` data type will be generated.
   > URL reserved characters, such as, `/`, `\`, `&`, `?`, etc  need to be URL encoded (like, %2F for `/`)
 
 # Optional Query Parameter
-* duplicate_flag : When `true` it implies that no two test case instances will be same or equal in the generated test cases.
+* __duplicate_flag__ : When `true` it implies that no two test case instances will be same or equal in the generated test cases.
   * When it is not set or supplied in GET query it defaults to `false`
   * Eg. [ 1, 2, 1] [1, 2, 1] will be rejected. However, [1, 1, 1] and [2, 2, 2] are passed. 
-* repetition_flag : When `true` it implies that within each test case instance no two `PRIMITIVE` data type will be same in the generated test cases. 
+* __repetition_flag__ : When `true` it implies that within each test case instance no two `PRIMITIVE` data type will be same in the generated test cases. 
   * When it is not set or supplied in GET query it defaults to `false`
   * To use this flag the duplicate_flag must be present in query
   * Only applicable for data structures other than `PRIMITIVE`
